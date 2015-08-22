@@ -17,6 +17,7 @@
 	{
 		private $WhatsProt = null;
 		private $WhatsApp = null;
+		private $Nickname = null;
 		private $Password = null;
 
 		private $Listener = null;
@@ -45,6 +46,7 @@
 
 			if(!empty($Config['WhatsApp']['Username']) && !empty($Config['WhatsApp']['Nickname']) && !empty($Config['WhatsApp']['Password']))
 			{
+				$this->Nickname = $Config['WhatsApp']['Nickname'];
 				$this->Password = $Config['WhatsApp']['Password'];
 
 				# WhatsApp
@@ -232,6 +234,9 @@
 				}
 			}
 		}
+
+		public function GetNickname()
+		{ return $this->Nickname; }
 
 		public function GetStartTime()
 		{ return $this->StartTime; }
