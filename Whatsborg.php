@@ -6,7 +6,7 @@
 	$Debug = false;
 
 
-	Std::Out('Starting WhatsBot...');
+	Std::Out('Starting Whatsborg...');
 
 	$W = new WhatsBot($Debug);
 	$W->Start();
