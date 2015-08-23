@@ -123,7 +123,7 @@
 
 		private function SendResponse(Message $Message, $Code)
 		{
-			if($Code === Module::EXECUTED || $Code === floatval(Module::EXECUTED))
+			if($Code === Module::EXECUTED || $Code === floatval(Module::EXECUTED) || $Code === null)
 				return $Code;
 
 			if(is_float($Code))
