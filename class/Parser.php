@@ -32,7 +32,7 @@
 				{
 					# Text Event
 					
-					$Module = $this->ModuleManager->GetModule('Event', 'text');
+					$Module = $this->ModuleManager->GetModule('Event', 'text', false);
 
 					if($Module instanceof Module)
 						$this->SendResponse($Message, $Module->Execute($Message));
